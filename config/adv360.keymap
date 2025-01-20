@@ -22,30 +22,28 @@
 
         #endif
 
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
         vn1: vn1 {
             compatible = "zmk,behavior-mod-morph";
             label = "VN1";
-            bindings = <&kp EXCLAMATION>, <&kp N1>;
+            bindings = <&kp EXCL>, <&kp N1>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        vn2: vn2 {
+        grave_escape_repro: grave_escape_repro {
             compatible = "zmk,behavior-mod-morph";
-            label = "VN2";
-            bindings = <&kp AT_SIGN>, <&kp N2>;
+            label = "GRAVE_ESCAPE_REPRO";
+            bindings = <&kp ESCAPE>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RSFT|MOD_RGUI)>;
+        };
+
+        v11: v11 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V11";
+            bindings = <&kp EXCL>, <&kp N1>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -61,11 +59,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE   &kp N1   &kp N2     &kp N3                &kp N4  &kp N5  &kp MINUS                                                                         &kp EQUAL          &kp N6  &kp N7         &kp N8                 &kp N9             &kp N0              &kp C_PLAY
-&kp TAB     &kp Q    &kp W      &kp E                 &kp R   &kp T   &kp LEFT_BRACKET                                                                  &kp RIGHT_BRACKET  &kp Y   &kp U          &kp I                  &kp O              &kp P               &kp BSLH
-&kp ESC     &kp A    &kp S      &kp D                 &kp F   &kp G   &kp COMMA         &vn2            &vn1              &kp F         &kp BACKSPACE   &kp PERIOD         &kp H   &kp J          &kp K                  &kp L              &kp SINGLE_QUOTE    &kp SLASH
-&kp C_PLAY  &kp Z    &kp X      &kp C                 &kp V   &kp B                                     &kp LEFT_ALT      &kp LEFT_ALT                                     &kp N   &kp M          &kp LEFT_ARROW         &mt LEFT_ALT DOWN  &mt LCTRL UP_ARROW  &kp RIGHT_ARROW
-&mo 3       &kp SQT  &kp ENTER  &kp LEFT_PARENTHESIS  &none           &kp LEFT_COMMAND  &kp LEFT_SHIFT  &kp RCTRL         &kp LCTRL     &kp LEFT_SHIFT  &kp SPACE                  &kp SEMICOLON  &kp RIGHT_PARENTHESIS  &kp ENTER          &kp F12             &mo 1
+&kp GRAVE   &kp N1   &kp N2     &kp N3                &kp N4  &kp N5  &kp MINUS                                                                                &kp EQUAL          &kp N6  &kp N7         &kp N8                 &kp N9             &kp N0              &kp C_PLAY
+&kp TAB     &kp Q    &kp W      &kp E                 &kp R   &kp T   &kp LEFT_BRACKET                                                                         &kp RIGHT_BRACKET  &kp Y   &kp U          &kp I                  &kp O              &kp P               &kp BSLH
+&kp ESC     &kp A    &kp S      &kp D                 &kp F   &kp G   &kp COMMA         &vn1            &v11              &grave_escape_repro  &kp BACKSPACE   &kp PERIOD         &kp H   &kp J          &kp K                  &kp L              &kp SINGLE_QUOTE    &kp SLASH
+&kp C_PLAY  &kp Z    &kp X      &kp C                 &kp V   &kp B                                     &kp LEFT_ALT      &kp LEFT_ALT                                            &kp N   &kp M          &kp LEFT_ARROW         &mt LEFT_ALT DOWN  &mt LCTRL UP_ARROW  &kp RIGHT_ARROW
+&mo 3       &kp SQT  &kp ENTER  &kp LEFT_PARENTHESIS  &none           &kp LEFT_COMMAND  &kp LEFT_SHIFT  &kp RCTRL         &kp LCTRL            &kp LEFT_SHIFT  &kp SPACE                  &kp SEMICOLON  &kp RIGHT_PARENTHESIS  &kp ENTER          &kp F12             &mo 1
             >;
         };
 
