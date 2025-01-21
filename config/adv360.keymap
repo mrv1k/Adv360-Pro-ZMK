@@ -70,7 +70,7 @@
         mrv6k: mrv6k {
             compatible = "zmk,behavior-mod-morph";
             label = "MRV6K";
-            bindings = <&kp EXCL>, <&kp N6>;
+            bindings = <&kp CARET>, <&kp N6>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -79,7 +79,7 @@
         mrv7k: mrv7k {
             compatible = "zmk,behavior-mod-morph";
             label = "MRV7K";
-            bindings = <&kp EXCL>, <&kp N7>;
+            bindings = <&kp AMPERSAND>, <&kp N7>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -88,7 +88,7 @@
         mrv8k: mrv8k {
             compatible = "zmk,behavior-mod-morph";
             label = "MRV8K";
-            bindings = <&kp EXCL>, <&kp N8>;
+            bindings = <&kp ASTERISK>, <&kp N8>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -97,7 +97,7 @@
         mrv9k: mrv9k {
             compatible = "zmk,behavior-mod-morph";
             label = "MRV9K";
-            bindings = <&kp EXCL>, <&kp N9>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp N9>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -106,7 +106,7 @@
         mrv0k: mrv0k {
             compatible = "zmk,behavior-mod-morph";
             label = "MRV0K";
-            bindings = <&kp EXCL>, <&kp N0>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -116,6 +116,24 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MRV_K";
             bindings = <&kp UNDERSCORE>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrvcurlybracketk_left: mrvcurlybracketk_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRVCURLYBRACKETK_LEFT";
+            bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrvcurlybracketk_right: mrvcurlybracketk_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRVCURLYBRACKETK_RIGHT";
+            bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -144,11 +162,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE   &mrv1k  &mrv2k  &mrv3k                &mrv4k     &mrv5k  &mrv_k                                                                  &kp EQUAL          &kp N6  &kp N7    &kp N8                 &kp N9             &kp N0              &kp C_PLAY
-&kp TAB     &kp Q   &kp W   &kp E                 &kp R      &kp T   &kp LEFT_BRACKET                                                        &kp RIGHT_BRACKET  &kp Y   &kp U     &kp I                  &kp O              &kp P               &kp BSLH
-&kp ESC     &kp A   &kp S   &kp D                 &kp F      &kp G   &kp COMMA         &kp BSPC  &kp LEFT_ALT       &kp LEFT_ALT   &kp BSPC  &kp PERIOD         &kp H   &kp J     &kp K                  &kp L              &kp SINGLE_QUOTE    &kp SLASH
-&kp C_PLAY  &kp Z   &kp X   &kp C                 &kp V      &kp B                               &kp BACKSPACE      &kp BACKSPACE                               &kp N   &kp M     &kp LEFT_ARROW         &mt LEFT_ALT DOWN  &mt LCTRL UP_ARROW  &kp RIGHT_ARROW
-&mo 3       &none   &none   &kp LEFT_PARENTHESIS  &kp SPACE          &kp LSHFT         &kp LGUI  &kp RCTRL          &kp LCTRL      &kp RET   &kp LEFT_SHIFT             &kp SEMI  &kp RIGHT_PARENTHESIS  &none              &kp F12             &mo 1
+&kp GRAVE   &mrv1k  &mrv2k        &mrv3k                &mrv4k     &mrv5k  &mrv_k                                                                        &kp EQUAL                &mrv6k  &mrv7k    &mrv8k                 &mrv9k             &mrv0k              &kp C_PLAY
+&kp TAB     &kp Q   &kp W         &kp E                 &kp R      &kp T   &mrvcurlybracketk_left                                                        &mrvcurlybracketk_right  &kp Y   &kp U     &kp I                  &kp O              &kp P               &kp BSLH
+&kp ESC     &kp A   &kp S         &kp D                 &kp F      &kp G   &kp COMMA               &kp BSPC  &kp LEFT_ALT       &kp LEFT_ALT   &kp BSPC  &kp PERIOD               &kp H   &kp J     &kp K                  &kp L              &kp SINGLE_QUOTE    &kp SLASH
+&kp C_PLAY  &kp Z   &kp X         &kp C                 &kp V      &kp B                                     &kp BACKSPACE      &kp BACKSPACE                                     &kp N   &kp M     &kp LEFT_ARROW         &mt LEFT_ALT DOWN  &mt LCTRL UP_ARROW  &kp RIGHT_ARROW
+&mo 3       &none   &kp LEFT_ALT  &kp LEFT_PARENTHESIS  &kp SPACE          &kp LSHFT               &kp LGUI  &kp RCTRL          &kp LCTRL      &kp RET   &kp LEFT_SHIFT                   &kp SEMI  &kp RIGHT_PARENTHESIS  &none              &kp F12             &mo 1
             >;
         };
 
