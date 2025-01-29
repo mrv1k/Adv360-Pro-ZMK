@@ -162,11 +162,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE   &mrv1k  &mrv2k        &mrv3k                &mrv4k     &mrv5k  &mrv_k                                                                        &kp EQUAL                &mrv6k  &mrv7k    &mrv8k                 &mrv9k             &mrv0k              &kp C_PLAY
-&kp TAB     &kp Q   &kp W         &kp E                 &kp R      &kp T   &mrvcurlybracketk_left                                                        &mrvcurlybracketk_right  &kp Y   &kp U     &kp I                  &kp O              &kp P               &kp BSLH
-&kp ESC     &kp A   &kp S         &kp D                 &kp F      &kp G   &kp COMMA               &kp BSPC  &kp LEFT_ALT       &kp LEFT_ALT   &kp BSPC  &kp PERIOD               &kp H   &kp J     &kp K                  &kp L              &kp SINGLE_QUOTE    &kp SLASH
-&kp C_PLAY  &kp Z   &kp X         &kp C                 &kp V      &kp B                                     &kp BACKSPACE      &kp BACKSPACE                                     &kp N   &kp M     &kp LEFT_ARROW         &mt LEFT_ALT DOWN  &mt LCTRL UP_ARROW  &kp RIGHT_ARROW
-&mo 3       &none   &kp LEFT_ALT  &kp LEFT_PARENTHESIS  &kp SPACE          &kp LSHFT               &kp LGUI  &kp RCTRL          &kp LCTRL      &kp RET   &kp LEFT_SHIFT                   &kp SEMI  &kp RIGHT_PARENTHESIS  &none              &kp F12             &mo 1
+&kp GRAVE  &mrv1k  &mrv2k        &mrv3k                &mrv4k     &mrv5k  &mrv_k                                                                      &kp EQUAL                &mrv6k  &mrv7k    &mrv8k                 &mrv9k             &mrv0k              &kp C_PLAY
+&kp TAB    &kp Q   &kp W         &kp E                 &kp R      &kp T   &mrvcurlybracketk_left                                                      &mrvcurlybracketk_right  &kp Y   &kp U     &kp I                  &kp O              &kp P               &kp BSLH
+&kp ESC    &kp A   &kp S         &kp D                 &kp F      &kp G   &kp COMMA               &kp BSPC  &kp LEFT_ALT      &kp LEFT_ALT  &kp BSPC  &kp PERIOD               &kp H   &kp J     &kp K                  &kp L              &kp SINGLE_QUOTE    &kp SLASH
+&none      &kp Z   &kp X         &kp C                 &kp V      &kp B                                     &kp SPACE         &kp SPACE                                        &kp N   &kp M     &kp LEFT_ARROW         &mt LEFT_ALT DOWN  &mt LCTRL UP_ARROW  &kp RIGHT_ARROW
+&mo 3      &none   &kp LEFT_ALT  &kp LEFT_PARENTHESIS  &kp SPACE          &kp LSHFT               &kp LGUI  &kp RCTRL         &kp LCTRL     &kp RET   &kp LEFT_SHIFT                   &kp SEMI  &kp RIGHT_PARENTHESIS  &none              &kp F12             &mo 1
             >;
         };
 
